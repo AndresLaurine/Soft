@@ -9,10 +9,10 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIERED TRUE)
 
 #export configuration to source code
-configure_file(HelloProjConfig.h.in HelloProjConfig.h)
+configure_file(cmake/HelloProjConfig.h.in HelloProjConfig.h)
 
 #add the executable target named HelloWorld
-add_executable(HelloWorld hello.cpp)
+add_executable(HelloWorld mains/hello.cpp)
 
 # add binary tree to the list of paths to search includes
 target_include_directories(HelloWorld
