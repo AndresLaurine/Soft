@@ -22,9 +22,17 @@ if(HELLOWORLD_WITH_EXECUTABLES)
 endif()
 
 #add tests
-option(HELLOWORD_WITH_TESTS "Compile tests" ON)
-if(HELLOWORD_WITH_TESTS)
+option(HELLOWORLD_WITH_TESTS "Compile tests" ON)
+if(HELLOWORLD_WITH_TESTS)
  enable_testing()
  message(STATUS "Configuring Hello World with tests")
  add_subdirectory(tests)
 endif()
+
+# create the package configuration file
+include(CMakePackageConfigHelpers)
+configure_package_config_file(
+cmake/HelloProjConfig.cmake.in
+HelloProjConfig.cmake
+INSTALL_DESTINATION cmake/
+)
