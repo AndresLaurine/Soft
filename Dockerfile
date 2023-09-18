@@ -7,7 +7,7 @@ RUN apt-get install -y cmake ninja-build build-essential
 # Copy source code here
 COPY . MyProject
 # Create building directory
-# RUN mkdir MyProject/build
+RUN mkdir MyProject/build
 # Configure and build
 RUN cd MyProject/build && cmake -G "Ninja" .. && ninja && ninja install
 # Clean to keep the image small
