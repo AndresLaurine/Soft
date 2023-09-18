@@ -2,5 +2,5 @@
 int main()
 {
 	print_version();
-	return 0;
+	return 1;
 }
