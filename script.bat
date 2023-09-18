@@ -1,5 +1,5 @@
-mkdir build2
-cd build2
+mkdir build
+cd build
 cmake ..
 cmake --build .
 ctest -C debug
