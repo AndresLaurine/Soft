@@ -30,7 +30,8 @@ jobs:
 
     - name: Build
       # Build your program with the given configuration
-      run: cmake -G Ninja --build ${{github.workspace}}/build 
+      run: build ${{github.workspace}}/build 
+      
     - name: Test
       working-directory: ${{github.workspace}}/build
       # Execute tests defined by the CMake configuration.
