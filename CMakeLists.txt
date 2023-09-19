@@ -11,6 +11,7 @@ set(CMAKE_CXX_STANDARD_REQUIERED TRUE)
 #export configuration to source code
 configure_file(cmake/HelloProjConfig.h.in HelloProjConfig.h)
 
+
 #add libraries
 add_subdirectory(source/basic)
 
